@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+a:focus {
+    color: 'white' !important;
+}
+
+
+#fdm-title:active, #fdm-title:hover { filter: brightness(180%); }
+
+
+img#gear-setting-icon{
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+img#gear-setting-icon:hover { 
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            filter: brightness(150%);
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mdl-layout__header-row{
+  background-color: black;
+}
+
+div.mdl-layout__drawer-button{
+  background-color: black;
+}
+
+.mdl-layout__content{
+  background-color:black !important;
+}
+
+.mdl-layout__header-row .mdl-layout__drawer-button{
+  background-color: black;
+}
+ .navbar-default{
+  background-color: black;
+}
+
+.mdl-layout__drawer-button[role="button"]{
+  background-color: black;
+}
+div.mdl-card__title{
+  overflow-wrap: break-word;
+  min-height: 100px !important;
+}
+
+
+.mdl-layout__content {
+  display: flex; /* or inline-flex */
+}
+
+* {
+    font-family: mina;
+    font-size: 18px;
+  }
+
+#nav-dropdown{ color:white !important; }
+
+
+a { 
+    text-decoration: none !important; 
+    color: inherit !important;
+  }
+
+#FILTER{
+  position: fixed !important;
+  z-index: 20 !important;
+  width: 100% !important;
+}
+
+
+
+
+

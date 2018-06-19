@@ -1,0 +1,28 @@
+.fcm-grid{
+	
+	width: 100% !important;
+	margin: 0 auto !important;
+	float: none !important;
+	padding-top: 70px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+
+@media only screen
+and (min-device-width: 200px)
+and (max-device-width: 550px){
+
+.fcm-grid{
+ 	padding-top: 190px !important;
+	}
+
+}
+
+@media only screen
+and (min-device-width: 1150px)
+and (max-device-width: 1440px) {
+.fcm-grid{
+	 	padding-left: 60px !important;
+		padding-right: 60px !important;
+	}
+}

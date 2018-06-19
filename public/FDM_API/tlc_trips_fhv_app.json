@@ -1,0 +1,83 @@
+{
+  "cw": [], 
+  "maps": [
+    {
+      "as_of_dt": "2017-08-31", 
+      "as_of_dt_wid": "20170831", 
+      "current_fytd": "1657796", 
+      "current_val": "839344", 
+      "data_set_name": "tlc_trips_fhv_app", 
+      "geo_id": "2", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "563851", 
+      "previous_val": "0", 
+      "previous_year_period": "291691"
+    }, 
+    {
+      "as_of_dt": "2017-08-31", 
+      "as_of_dt_wid": "20170831", 
+      "current_fytd": "2708", 
+      "current_val": "1353", 
+      "data_set_name": "tlc_trips_fhv_app", 
+      "geo_id": "None", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "16063", 
+      "previous_val": "0", 
+      "previous_year_period": "8118"
+    }, 
+    {
+      "as_of_dt": "2017-08-31", 
+      "as_of_dt_wid": "20170831", 
+      "current_fytd": "3639550", 
+      "current_val": "1799683", 
+      "data_set_name": "tlc_trips_fhv_app", 
+      "geo_id": "4", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "1994620", 
+      "previous_val": "0", 
+      "previous_year_period": "1021172"
+    }, 
+    {
+      "as_of_dt": "2017-08-31", 
+      "as_of_dt_wid": "20170831", 
+      "current_fytd": "144944", 
+      "current_val": "71163", 
+      "data_set_name": "tlc_trips_fhv_app", 
+      "geo_id": "5", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "50257", 
+      "previous_val": "0", 
+      "previous_year_period": "25197"
+    }, 
+    {
+      "as_of_dt": "2017-08-31", 
+      "as_of_dt_wid": "20170831", 
+      "current_fytd": "12283112", 
+      "current_val": "5970612", 
+      "data_set_name": "tlc_trips_fhv_app", 
+      "geo_id": "1", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "9068537", 
+      "previous_val": "0", 
+      "previous_year_period": "4568618"
+    }, 
+    {
+      "as_of_dt": "2017-08-31", 
+      "as_of_dt_wid": "20170831", 
+      "current_fytd": "6086663", 
+      "current_val": "2979557", 
+      "data_set_name": "tlc_trips_fhv_app", 
+      "geo_id": "3", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "3250346", 
+      "previous_val": "0", 
+      "previous_year_period": "1647426"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+*
+{
+   font-family: Helvetica !important;
+}
+
+p {
+	color: black;
+	marginTop: 0px;
+ }
+
+.card #titleMeasure {
+	align-items: flex-start;
+	color: #fff;
+	display:inline-block;
+	padding-bottom:0px;
+}
+
+.card #titleMeasure #cardTitle{
+	margin-top: 0;
+	color:black;
+}
+
+.card #percentMeasure {
+		align-items: center;
+		color: #fff;
+		display:inline-block;
+		text-align:center;
+		padding-top:0px;
+	}
+
+.card #percentMeasure	h4 {
+	padding-top: 7px;
+	color: black;
+	font-size: 45px;
+	font-weight: bold;
+	}
+
+.card #yearlyMeasures {
+	overflow:hidden;
+	border-top: .1px solid;
+	max-height:60px;
+}
+
+.card #yearlyMeasures #currentFytd {
+	color: #fff;
+	left: 150px;
+	float: left;
+	text-align:center;
+}
+
+.card #yearlyMeasures #prevFytd {
+	color: #fff;
+	position: absolute;
+	right: 0;
+	float: left;
+	padding-right: 10px;
+	align-items: center;
+	text-align: center;
+	margin: 0px;
+}
+
+.card {
+    align-self:stretch !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    opacity: 0.9;
+  }
+
+  .card > div {
+  border-bottom: .01px solid #000;
+  width: 100% !important;
+  height: 100% !important;
+  display: inline-block !important;
+}
+
+.card #cardDetail{
+	display:flex;
+	flex-direction:row;
+	align-items: flex-end
+}
+
+.card #cardDetail #date {
+	margin-left:auto;
+}
+.card #cardDetail #dep {
+	align-self:flex-start;
+}
+.card #cardDetail #dep p {
+	font-weight:bold;
+}
+
+.card #cardTitle {
+	font-weight:normal
+}
+
+#currentFytd div, #prevFytd div{
+	color: black;
+}
+
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 768px) {
+
+  .card {   
+    align-self:stretch !important;
+  }
+
+}
+
+
+/*  #yearlyMeasures{ display:none !important; } */

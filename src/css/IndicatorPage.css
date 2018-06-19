@@ -1,0 +1,26 @@
+#indicator-grid{
+  margin:50px !important;
+  margin-top:10px !important;
+}
+
+ text.gtitle tspan{
+ 	font-size: calc(1vw + 1vh + .05vmin) !important;
+ }
+
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 544px) {
+  
+  #indicator-grid{
+    margin:5px !important
+  }
+
+  .mdl-cell--2-col{
+  display:inline-flex !important;
+}
+
+ #graph-mes{
+  	font-size: 10px !important;
+ }
+
+}

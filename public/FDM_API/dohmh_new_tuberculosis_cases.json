@@ -1,0 +1,31 @@
+{
+  "cw": [
+    {
+      "as_of_dt": "2018-05-01", 
+      "as_of_dt_wid": "20180501", 
+      "current_fytd": "561", 
+      "current_val": "52", 
+      "data_set_name": "dohmh_new_tuberculosis_cases", 
+      "geo_id": "None", 
+      "geo_type": "CW", 
+      "is_error": "N", 
+      "previous_fytd": "514", 
+      "previous_val": "51", 
+      "previous_year_period": "49"
+    }, 
+    {
+      "as_of_dt": "2017-11-01", 
+      "as_of_dt_wid": "20171101", 
+      "current_fytd": "561", 
+      "current_val": "52", 
+      "data_set_name": "dohmh_new_tuberculosis_cases", 
+      "geo_id": "None", 
+      "geo_type": "CW", 
+      "is_error": "N", 
+      "previous_fytd": "514", 
+      "previous_val": "51", 
+      "previous_year_period": "49"
+    }
+  ], 
+  "maps": []
+}

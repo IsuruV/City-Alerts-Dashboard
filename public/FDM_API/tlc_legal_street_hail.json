@@ -1,0 +1,136 @@
+{
+  "cw": [
+    {
+      "as_of_dt": "2014-11-30", 
+      "as_of_dt_wid": "20141130", 
+      "current_fytd": "73482672", 
+      "current_val": "14732009", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "None", 
+      "geo_type": "CW", 
+      "is_error": "N", 
+      "previous_fytd": "70494404", 
+      "previous_val": "15690240", 
+      "previous_year_period": "14752968"
+    }, 
+    {
+      "as_of_dt": "2014-10-31", 
+      "as_of_dt_wid": "20141031", 
+      "current_fytd": "58750663", 
+      "current_val": "15690240", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "None", 
+      "geo_type": "CW", 
+      "is_error": "N", 
+      "previous_fytd": "55741436", 
+      "previous_val": "14705784", 
+      "previous_year_period": "15165750"
+    }, 
+    {
+      "as_of_dt": "2014-09-30", 
+      "as_of_dt_wid": "20140930", 
+      "current_fytd": "43060421", 
+      "current_val": "14705784", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "None", 
+      "geo_type": "CW", 
+      "is_error": "N", 
+      "previous_fytd": "40575686", 
+      "previous_val": "14002128", 
+      "previous_year_period": "14152747"
+    }, 
+    {
+      "as_of_dt": "2014-08-31", 
+      "as_of_dt_wid": "20140831", 
+      "current_fytd": "28353942", 
+      "current_val": "14002128", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "None", 
+      "geo_type": "CW", 
+      "is_error": "N", 
+      "previous_fytd": "26423130", 
+      "previous_val": "14351694", 
+      "previous_year_period": "12600979"
+    }
+  ], 
+  "maps": [
+    {
+      "as_of_dt": "2014-11-30", 
+      "as_of_dt_wid": "20141130", 
+      "current_fytd": "62034279", 
+      "current_val": "12442367", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "1", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "63515094", 
+      "previous_val": "13377695", 
+      "previous_year_period": "13152959"
+    }, 
+    {
+      "as_of_dt": "2014-11-30", 
+      "as_of_dt_wid": "20141130", 
+      "current_fytd": "466549", 
+      "current_val": "93229", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "2", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "86832", 
+      "previous_val": "91458", 
+      "previous_year_period": "43036"
+    }, 
+    {
+      "as_of_dt": "2014-11-30", 
+      "as_of_dt_wid": "20141130", 
+      "current_fytd": "3936159", 
+      "current_val": "856040", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "3", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "2087875", 
+      "previous_val": "836255", 
+      "previous_year_period": "468739"
+    }, 
+    {
+      "as_of_dt": "2014-11-30", 
+      "as_of_dt_wid": "20141130", 
+      "current_fytd": "5583356", 
+      "current_val": "1100913", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "4", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "3810125", 
+      "previous_val": "1148340", 
+      "previous_year_period": "803399"
+    }, 
+    {
+      "as_of_dt": "2014-11-30", 
+      "as_of_dt_wid": "20141130", 
+      "current_fytd": "1167", 
+      "current_val": "206", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "5", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "939", 
+      "previous_val": "233", 
+      "previous_year_period": "193"
+    }, 
+    {
+      "as_of_dt": "2014-11-30", 
+      "as_of_dt_wid": "20141130", 
+      "current_fytd": "1461162", 
+      "current_val": "239254", 
+      "data_set_name": "tlc_legal_street_hail", 
+      "geo_id": "None", 
+      "geo_type": "nybb", 
+      "is_error": "None", 
+      "previous_fytd": "993539", 
+      "previous_val": "236259", 
+      "previous_year_period": "284642"
+    }
+  ]
+}
