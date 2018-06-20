@@ -18,20 +18,33 @@ export const PostDispatcher = (method, url, type, payload=null, headers=DEFAULT_
 
 
 
+// export const getDispatcher = (method, url, type, headers=DEFAULT_HEADERS) => {
+//   return (dispatch) => {
+//   axios.get(url,{
+//     method,
+//     headers
+//   }).then((jsonResponse) => {
+//         console.log('returned response json')
+//         return dispatch({
+//           type,
+//           payload: jsonResponse.data
+//         })
+//       }).catch((error)=> { alert(error) })
+//   }
+// }
+
 export const getDispatcher = (method, url, type, headers=DEFAULT_HEADERS) => {
-  return (dispatch) => {
-  axios.get(url,{
-    method,
-    headers
-  }).then((jsonResponse) => {
-        console.log('returned response json')
-        return dispatch({
-          type,
-          payload: jsonResponse.data
-        })
-      }).catch((error)=> { alert(error) })
-  }
+  let json = require(`./FDM_API/${url}`)
+  //import json from ''
+  return { type, payload: json}
 }
+
+export const loadData = (method, url, type, headers=DEFAULT_HEADERS) => {
+  let json = require(`./FDM_API/${url}`)
+  //import json from ''
+  return json
+}
+
 
 export const getDispatcherOptions = (method, url, type, options=null) => {
   return (dispatch) => {
@@ -45,7 +58,7 @@ export const getDispatcherOptions = (method, url, type, options=null) => {
         }else{
           return dispatch({ type, payload: jsonResponse })
         }
-        
+
       }).catch((error)=> { alert(error) })
   }
 }

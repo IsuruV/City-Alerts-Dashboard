@@ -2,12 +2,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import trend from 'trend';
-import $ from 'jquery'; 
+import $ from 'jquery';
 import axios from 'axios';
-import { DEFAULT_HEADERS } from '../actions';
+import { DEFAULT_HEADERS, getDispatcher, FETCH_DATA, loadData } from '../actions';
 import LineGraph from './LineGraph';
 import GoogleMaps from './GoogleMaps';
-import { Grid, Cell } from 'react-mdl'; 
+import { Grid, Cell } from 'react-mdl';
 import nightStyle from '../geoJson/nightStyle';
 import '../css/IndicatorPage.css';
 import { determineMapLayout, determineMapType, cachDetail, titles, numberWithCommas, roundNumber, hideOrShowSlider } from '../actions';
@@ -19,22 +19,39 @@ class IndicatorPage extends Component {
     this.state = { dataSetName: '', graphPoints: [], plotPoints: [], timeline: [], values: [], plottable: true }
   }
 
-  componentWillMount(){  
-    const { indicatorPage } = this.props.match.params
+  // componentWillMount(){
+  //   const { indicatorPage } = this.props.match.params
+  //
+  //   let cardDetails = this.props.cachedCardDetail.filter((card) => card.datasetName == indicatorPage);
+  //   if(cardDetails.length > 0){
+  //     let cardDetail = cardDetails[0].data.data;
+  //     this.saveState(cardDetail, indicatorPage)
+  //   }else{
+  //      axios.get(`http://localhost:5555/api/${indicatorPage}` ,{ method: 'GET', headers: DEFAULT_HEADERS })
+  //       .then((jsonResponse) => {
+  //         console.log('RESPONSE POINTS:', jsonResponse)
+  //         let plotablePoints = jsonResponse.data.cw
+  //         //debugger;
+  //         this.props.cachDetail({datasetName: indicatorPage, data: jsonResponse })
+  //         this.saveState(jsonResponse.data, indicatorPage)
+  //       })
+  //       console.log('STORED POINTS:', this.props.raw_cards)
+  //   }
+  //
+  // }
 
+  componentWillMount(){
+    const { indicatorPage } = this.props.match.params
+    getDispatcher('GET', 'api', FETCH_DATA)
     let cardDetails = this.props.cachedCardDetail.filter((card) => card.datasetName == indicatorPage);
     if(cardDetails.length > 0){
       let cardDetail = cardDetails[0].data.data;
       this.saveState(cardDetail, indicatorPage)
     }else{
-       axios.get(`http://localhost:5555/api/${indicatorPage}` ,{ method: 'GET', headers: DEFAULT_HEADERS })
-        .then((jsonResponse) => {
-          console.log('RESPONSE POINTS:', jsonResponse)
-          let plotablePoints = jsonResponse.data.cw
-          //debugger;
-          this.props.cachDetail({datasetName: indicatorPage, data: jsonResponse })
-          this.saveState(jsonResponse.data, indicatorPage)
-        })
+       let data = loadData('GET', 'api', indicatorPage)
+       let plotablePoints = data
+       this.props.cachDetail({datasetName: indicatorPage, data: data })
+       this.saveState(plotablePoints, indicatorPage)
         console.log('STORED POINTS:', this.props.raw_cards)
     }
 
@@ -42,9 +59,10 @@ class IndicatorPage extends Component {
 
 
   saveState(cardDetail, indicatorPage){
-      let plotablePoints = cardDetail.cw
+      let plotablePoints = cardDetail
+      debugger;
       if (plotablePoints.length == 0) { this.setState({ dataSetName: indicatorPage, plottable: false }) }
-      this.setState({graphPoints: cardDetail.maps});
+      this.setState({graphPoints: cardDetail});
       this.renderDataPoints(plotablePoints)
   }
 
@@ -66,7 +84,7 @@ class IndicatorPage extends Component {
     if (graphPoints.length > 0){
         let mapType = determineMapType(graphPoints);
         if( (!!mapType)){
-            return (<GoogleMaps 
+            return (<GoogleMaps
                       isMarkerShown
                       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKlQ6I-LhNd371OBwgIH3yQtrpYu2oxA8&v=3.exp&libraries=geometry,drawing,places"
                       loadingElement={<div style={{ height: `100%` }} />}
@@ -88,7 +106,7 @@ class IndicatorPage extends Component {
    if(!plottable) { return <div style={{paddingTop: '30px'}}> <h2 style={{color: 'white'}}> No Plottable Data Points </h2> </div> }
    if(plotPoints.length > 0 ){
       return (
-            <LineGraph 
+            <LineGraph
                 daily={
                   {
                     values,
@@ -101,7 +119,7 @@ class IndicatorPage extends Component {
                     timeline
                   }
                 }
-                title= {titles(datasetName)} /> 
+                title= {titles(datasetName)} />
       );
     }else{
       return ( <div><img src={'https://loading.io/spinners/cube/lg.pulsing-squares-loader.gif'}/></div>)
@@ -111,7 +129,7 @@ class IndicatorPage extends Component {
     render() {
       console.log('INDICATOR PAGE RENDERED')
       const { data } = this.props.location.state
-      const { as_of_dt, current_fytd, previous_fytd, data_set_name, color } = data 
+      const { as_of_dt, current_fytd, previous_fytd, data_set_name, color } = data
       let percentChange = ((current_fytd/previous_fytd) - 1) * 100;
       let percentChangeYtd = numberWithCommas(Math.round(percentChange * 100) / 100);
       return(
@@ -155,7 +173,7 @@ class IndicatorPage extends Component {
 }
 
 const  mapStateToProps = state => {
-  const { raw_cards, searchedCards, groupedCards, cachedCardDetail } = state.cards; 
+  const { raw_cards, searchedCards, groupedCards, cachedCardDetail } = state.cards;
   return { raw_cards, searchedCards, groupedCards, cachedCardDetail }
 }
 export default connect(mapStateToProps, { cachDetail })(IndicatorPage);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import $ from 'jquery'; 
+import $ from 'jquery';
 import { getDispatcher, fetchCardsData, hideOrShowSlider, URL, FETCH_DATA } from '../actions';
 import '../css/FdmCards.css';
 import FdmCard from './FdmCard';
@@ -15,16 +15,15 @@ class FdmCards extends Component {
   componentWillMount(){
     const { getDispatcher } = this.props;
     const { cards, groupedCards, searchedCards } = this.props.cards;
-    if (cards.length == 0) getDispatcher('GET', URL, FETCH_DATA)
+    if (cards.length == 0) getDispatcher('GET', 'api', FETCH_DATA)
   }
 
   componentDidMount(){
     $('.mdl-layout__drawer-button').show()
     this.fadeHeader()
-    debugger
     //hideOrShowSlider(window)
   }
-  
+
   componentDidUpdate(prevProps, prevState){
     if (this.props.cards.groupedCards.length > 0){
         $('.mdl-layout__header').fadeIn(10);
@@ -41,14 +40,14 @@ class FdmCards extends Component {
 
         let scrolled = $(this).scrollTop();
         if (scrolled > lastScrollTop)
-          { 
+          {
             console.log(filter[0]['position'])
             filter.hide();
             $('#FILTER').hide();
             scrolled = $(this).scrollTop();
            }
         else
-          { 
+          {
             console.log($(this).scrollTop())
             filter.show();
             $('#FILTER').show();
@@ -90,7 +89,7 @@ class FdmCards extends Component {
 }
 
 const  mapStateToProps = state => {
-  const { cards, searchedCards, groupedCards } = state 
+  const { cards, searchedCards, groupedCards } = state
   return { cards, searchedCards, groupedCards  }
 }
 
